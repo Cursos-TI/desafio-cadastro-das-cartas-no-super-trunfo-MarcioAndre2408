@@ -1,23 +1,26 @@
 #include <stdio.h>
 int main (){ 
-    
-    char estado [Brasília];
-    char codigo da carta[A01];
-    char nome da cidade [Distrito Federal];
-    int população (2.8);
-    float area em km² (5.761);
-    float pib  (265,847 bilhões);
-    int numero de ponto turístico (09);
+    carta 1
+    printf  char estado [Brasília];
+    scant char codigo da carta[A01];
+    printf nome da cidade [Distrito Federal];
+    scanf populcao  (2.8);
+    printfarea em km² (5.761);
+    scanf pib (265,847 bilhões);
+    printf numero de ponto turístico (09);
+     
+    carta 2 
+    printf estado Minas Gerais 
+    scanf codigo da carta[A02];
+    printf nome da cidade [Belo Horizonte]
+    scanf populacao (2,316)
+    printf area em km² (331,4)
+    scanf pib (105,8 bilhoes)
+    printf numero de ponto turístico (15)
 
-    char estado [Minas Gerais];
-    char codigo carta [A02];
-    char nome da cidade [Belo Horizonte];
-    int população (2,316);
-    float area em km² (331,4);
-    float pib (105,8 bilhões);
-    int numero de porto turíticos (15);
-}carta;
-carta carta1; carta2;
+
+} 
+
 
 
 
