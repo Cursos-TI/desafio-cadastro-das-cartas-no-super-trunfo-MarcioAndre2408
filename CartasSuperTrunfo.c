@@ -1,4 +1,29 @@
 #include <stdio.h>
+int main (){ 
+    
+    char estado [Brasília];
+    char codigo da carta[A01];
+    char nome da cidade [Distrito Federal];
+    int população (2.8);
+    float area em km² (5.761);
+    float pib  (265,847 bilhões);
+    int numero de ponto turístico (09);
+
+    char estado [Minas Gerais];
+    char codigo carta [A02];
+    char nome da cidade [Belo Horizonte];
+    int população (2,316);
+    float area em km² (331,4);
+    float pib (105,8 bilhões);
+    int numero de porto turíticos (15);
+}carta;
+carta carta1; carta2;
+
+
+
+
+
+
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
