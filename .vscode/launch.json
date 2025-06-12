@@ -5,3 +5,119 @@
     "version": "0.2.0",
     "configurations": []
 }
+
+#include <stdio.h> // Essencial para funções de entrada/saída como printf e scanf
+
+int main() {
+    // --- Variáveis para a Carta 1 (Brasília) ---
+    // Para strings (como códigos de estado e nomes de cidades), você precisa declarar um array de 'char'
+    // com espaço suficiente para os caracteres mais um extra para o terminador nulo '\0'.
+    // O terminador nulo marca automaticamente o fim de uma string em C.
+    char estado_DF1[3];           // Exemplo: "DF" precisa de 2 caracteres + 1 para '\0' = 3
+    char codigo_carta1[4];         // Exemplo: "A01" precisa de 3 caracteres + 1 para '\0' = 4
+    char nome_cidade1[50];         // Espaço amplo para nomes de cidades como "Brasilia"
+    int populacao1;                // Armazenando a população como um número inteiro (ex: 2817 para 2.817 milhões)
+    float area1_km2;               // Área em Km²
+    float pib1_bilhoes;            // PIB em bilhões
+    int pontos_turisticos1;        // Número de pontos turísticos
+
+    // --- Variáveis para a Carta 2 (Belo Horizonte) ---
+    char estado_MG2[3];            // Exemplo: "MG" + '\0'
+    char codigo_carta2[4];         // Exemplo: "A02" + '\0'
+    char nome_cidade2[50];         // Espaço amplo para "Belo Horizonte"
+    int populacao2;
+    float area2_km2;
+    float pib2_bilhoes;
+    int pontos_turisticos2;
+    int temp_char; // Esta variável será usada para limpar o buffer de entrada
+
+    printf("--- Inserir Dados para Brasília ---\n");
+
+    // Solicite ao usuário de forma clara a entrada
+    printf("Digite o Estado (ex: DF): ");
+    // Use %2s para ler uma string de até 2 caracteres em estado_DF1.
+    // O nome da variável corresponde à declaração.
+    scanf("%2s", estado_DF1);
+    // Limpa o buffer de entrada. Isso é crucial após scanf("%s") ou scanf("%d/%f")
+    // para remover quaisquer caracteres restantes (como o caractere de nova linha) que possam
+    // interferir nas chamadas subsequentes de scanf.
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
+
+    printf("Digite o Código da Carta (ex: A01): ");
+    scanf("%3s", codigo_carta1);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
+
+    printf("Digite o Nome da Cidade (ex: Brasilia): ");
+    scanf("%49s", nome_cidade1); // %49s para deixar espaço para o terminador nulo
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
+
+    // Para a população, leremos a parte inteira (ex: 2817 para 2.817 milhões)
+    printf("Digite a População em milhares (ex: 2817 para 2.817 milhões): ");
+    scanf("%d", &populacao1); // Use '&' para variáveis não-array para passar seu endereço de memória
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
+
+    printf("Digite a Área em Km² (ex: 5.761): ");
+    scanf("%f", &area1_km2);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
+
+    printf("Digite o PIB em bilhões (ex: 2.174): ");
+    scanf("%f", &pib1_bilhoes);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
+
+    printf("Digite o Número de Pontos Turísticos (ex: 15): ");
+    scanf("%d", &pontos_turisticos1);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
+
+    printf("\n--- Inserir Dados para Belo Horizonte ---\n");
+
+    printf("Digite o Estado (ex: MG): ");
+    scanf("%2s", estado_MG2);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
+
+    printf("Digite o Código da Carta (ex: A02): ");
+    scanf("%3s", codigo_carta2);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
+
+    printf("Digite o Nome da Cidade (ex: Belo Horizonte): ");
+    scanf("%49s", nome_cidade2);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
+
+    printf("Digite a População em milhares (ex: 2316 para 2.316 milhões): ");
+    scanf("%d", &populacao2);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
+
+    printf("Digite a Área em Km² (ex: 331.4): ");
+    scanf("%f", &area2_km2);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
+
+    printf("Digite o PIB em bilhões (ex: 105.8): ");
+    scanf("%f", &pib2_bilhoes);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
+
+    printf("Digite o Número de Pontos Turísticos (ex: 15): ");
+    scanf("%d", &pontos_turisticos2);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
+
+    // --- Exibindo os Dados da Carta 1 ---
+    printf("\n--- Dados de Brasília ---\n");
+    printf("Estado: %s\n", estado_DF1);
+    printf("Código da Carta: %s\n", codigo_carta1);
+    printf("Cidade: %s\n", nome_cidade1);
+    // Converte a população para milhões dividindo por 1000.0 (divisão de ponto flutuante)
+    printf("População: %.3f milhões de habitantes\n", (float)populacao1 / 1000.0);
+    printf("Área: %.3f km²\n", area1_km2);
+    printf("PIB: %.3f bilhões de reais\n", pib1_bilhoes);
+    printf("Pontos Turísticos: %d\n", pontos_turisticos1);
+
+    // --- Exibindo os Dados da Carta 2 ---
+    printf("\n--- Dados de Belo Horizonte ---\n");
+    printf("Estado: %s\n", estado_MG2);
+    printf("Código da Carta: %s\n", codigo_carta2);
+    printf("Cidade: %s\n", nome_cidade2);
+    printf("População: %.3f milhões de habitantes\n", (float)populacao2 / 1000.0);
+    printf("Área: %.1f km²\n", area2_km2);
+    printf("PIB: %.1f bilhões de reais\n", pib2_bilhoes);
+    printf("Pontos Turísticos: %d\n", pontos_turisticos2);
+
+    return 0; // Indica que o programa terminou com sucesso
+}
